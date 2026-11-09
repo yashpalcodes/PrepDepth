@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: prepdebt-db
+    environment:
+      POSTGRES_USER: prepdebt
+      POSTGRES_PASSWORD: prepdebt
+      POSTGRES_DB: prepdebt
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
