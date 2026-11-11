@@ -4,10 +4,13 @@ import { pool } from "./db/pool";
 import { requireAuth } from "./middleware/auth";
 import { errorHandler, notFound } from "./middleware/errors";
 import { authRouter } from "./routes/auth";
+import { cardsRouter } from "./routes/cards";
+import { importRouter } from "./routes/import";
 import { patternsRouter } from "./routes/patterns";
 import { problemsRouter } from "./routes/problems";
 import { queueRouter } from "./routes/queue";
 import { reviewsRouter } from "./routes/reviews";
+import { statsRouter } from "./routes/stats";
 
 export const app = express();
 
@@ -27,8 +30,11 @@ app.get("/health", async (_req, res) => {
 app.use("/auth", authRouter);
 app.use("/patterns", requireAuth, patternsRouter);
 app.use("/problems", requireAuth, problemsRouter);
+app.use("/cards", requireAuth, cardsRouter);
 app.use("/queue", requireAuth, queueRouter);
 app.use("/reviews", requireAuth, reviewsRouter);
+app.use("/stats", requireAuth, statsRouter);
+app.use("/import", requireAuth, importRouter);
 
 app.use(notFound);
 app.use(errorHandler);
