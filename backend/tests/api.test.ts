@@ -233,3 +233,34 @@ describe("csv import", () => {
     expect(res.body.error).toContain("patterns");
   });
 });
+
+describe("stats overview", () => {
+  const total = (days: { count: number }[]) => days.reduce((s, d) => s + d.count, 0);
+
+  it("summarises cards, due load and recent reviews", async () => {
+    const { token } = await newUser();
+    const a = await addProblem(token, { title: "Overview A", patterns: ["Stack"], firstReviewInDays: 0 });
+    await addProblem(token, { title: "Overview B", patterns: ["Heap"], firstReviewInDays: 3 });
+
+    const before = await request(app).get("/stats/overview").set(auth(token));
+    expect(before.status).toBe(200);
+    expect(before.body.totalCards).toBe(2);
+    expect(before.body.dueNow).toBe(1);
+    expect(before.body.days).toHaveLength(14);
+    expect(total(before.body.days)).toBe(1); // only the card due in 3 days
+    expect(before.body.reviews7d).toBe(0);
+    expect(before.body.recallRate30d).toBeNull();
+
+    await request(app).post("/reviews").set(auth(token)).send({ userProblemId: a.body.id, rating: 3 });
+
+    const after = await request(app).get("/stats/overview").set(auth(token));
+    expect(after.body.dueNow).toBe(0);
+    expect(total(after.body.days)).toBe(2); // the reviewed card is now due in 6 days... or 1, either way inside 14
+    expect(after.body.reviews7d).toBe(1);
+    expect(after.body.recallRate30d).toBe(1);
+  });
+
+  it("requires a token", async () => {
+    expect((await request(app).get("/stats/overview")).status).toBe(401);
+  });
+});
