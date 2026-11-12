@@ -47,6 +47,10 @@ export class ApiError extends Error {
   }
 }
 
+export function errorText(err: unknown): string {
+  return err instanceof Error ? err.message : "Something went wrong";
+}
+
 function errorMessage(data: unknown, status: number): string {
   if (data && typeof data === "object") {
     const d = data as { error?: unknown; details?: { path?: string; message?: string }[] };
@@ -62,22 +66,29 @@ function errorMessage(data: unknown, status: number): string {
 
 interface Options {
   method?: "GET" | "POST";
+  /** Sent as JSON. */
   body?: unknown;
+  /** Sent as raw CSV text (used by the import endpoint). */
+  text?: string;
 }
 
-export async function api<T>(path: string, { method = "GET", body }: Options = {}): Promise<T> {
+export async function api<T>(path: string, { method = "GET", body, text }: Options = {}): Promise<T> {
   const session = loadSession();
   const headers: Record<string, string> = {};
   if (session) headers.Authorization = `Bearer ${session.token}`;
-  if (body !== undefined) headers["Content-Type"] = "application/json";
+
+  let payload: string | undefined;
+  if (text !== undefined) {
+    headers["Content-Type"] = "text/csv";
+    payload = text;
+  } else if (body !== undefined) {
+    headers["Content-Type"] = "application/json";
+    payload = JSON.stringify(body);
+  }
 
   let res: Response;
   try {
-    res = await fetch(`${BASE}${path}`, {
-      method,
-      headers,
-      body: body === undefined ? undefined : JSON.stringify(body),
-    });
+    res = await fetch(`${BASE}${path}`, { method, headers, body: payload });
   } catch {
     throw new ApiError(0, "Cannot reach the server. Is the backend running?");
   }
