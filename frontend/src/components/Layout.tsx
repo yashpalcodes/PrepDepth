@@ -11,6 +11,7 @@ export function Layout() {
           <NavLink to="/" end>
             Today
           </NavLink>
+          <NavLink to="/add">Add</NavLink>
         </nav>
         <div className="spacer" />
         <span className="muted small">{session?.email}</span>
