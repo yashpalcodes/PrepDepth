@@ -59,3 +59,23 @@ export interface ImportResult {
   skipped: number;
   errors: { row: number; message: string }[];
 }
+
+export interface PatternStat {
+  patternId: number;
+  name: string;
+  cards: number;
+  dueNow: number;
+  mastery: number; // 0..1
+  recentReviews: number; // 0 means no data yet
+  lastReviewedAt: string | null;
+}
+
+export interface Overview {
+  totalCards: number;
+  dueNow: number;
+  later: number;
+  reviews7d: number;
+  reviews30d: number;
+  recallRate30d: number | null;
+  days: { day: number; count: number }[];
+}
