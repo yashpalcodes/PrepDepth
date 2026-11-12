@@ -30,3 +30,19 @@ The response lists `imported`, `skipped` (already in your list) and `errors` (wi
 - Passwords are hashed with bcrypt. Login returns the same error for an unknown email and a wrong password.
 - Inputs are validated with Zod, and errors use one consistent JSON shape.
 - Tests run against a separate `prepdebt_test` database that is created, migrated and seeded automatically.
+
+## GET /stats/overview
+
+Returns the numbers behind the Insights page:
+
+| Field | Meaning |
+|---|---|
+| `totalCards` | Active problems |
+| `dueNow` | Cards due now |
+| `later` | Cards due more than 14 days away |
+| `reviews7d` | Reviews in the last 7 days |
+| `reviews30d` | Reviews in the last 30 days |
+| `recallRate30d` | Share of reviews rated Hard or better in 30 days, or `null` with no reviews |
+| `days` | 14 entries `{day, count}`: cards due in each rolling 24-hour window from now |
+
+`recallRate30d` is self-reported (the user rates their own recall), so it measures how often people believe they remembered, not an objective test score.

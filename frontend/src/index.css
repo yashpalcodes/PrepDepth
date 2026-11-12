@@ -192,3 +192,19 @@ legend { font-weight: 600; font-size: 0.9rem; padding: 0 0.3rem; }
   .compare, .grid2 { grid-template-columns: 1fr; }
   .ratings { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ---- Day 9: insights ---- */
+.tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 1rem; }
+.tile { text-align: center; padding: 0.9rem 0.5rem; }
+.tile-value { font-size: 1.8rem; font-weight: 700; line-height: 1.2; }
+.tile-label { color: var(--muted); font-size: 0.85rem; }
+.insight-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 1rem; }
+.rank { list-style: none; padding: 0; margin: 0.5rem 0 0; display: grid; gap: 0.4rem; }
+.rank li { display: flex; justify-content: space-between; gap: 1rem; }
+.chart-card { margin-bottom: 1rem; }
+.chart-card p { margin: 0 0 0.75rem; }
+
+@media (max-width: 560px) {
+  .tiles { grid-template-columns: repeat(2, 1fr); }
+  .insight-grid { grid-template-columns: 1fr; }
+}

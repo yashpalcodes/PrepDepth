@@ -11,6 +11,7 @@ export function Layout() {
           <NavLink to="/" end>
             Today
           </NavLink>
+          <NavLink to="/insights">Insights</NavLink>
           <NavLink to="/add">Add</NavLink>
         </nav>
         <div className="spacer" />

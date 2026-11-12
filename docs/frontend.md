@@ -33,3 +33,11 @@ The recall text is deliberately not sent to the server. It exists so the user ca
 
 - `AddProblemForm` loads patterns from the API, so the choices always match the database.
 - `CsvImport` reads the file in the browser and sends it as `text/csv`. The server reports imported, skipped and failed rows, and the page shows the failed rows with their row numbers.
+
+## Insights page
+
+`src/pages/Insights.tsx` loads `/stats/patterns` and `/stats/overview` together and shows summary tiles, weakest and strongest patterns, a mastery bar chart and an upcoming-load chart (Recharts).
+
+- Patterns with no reviews are drawn grey, because their mastery is only the neutral prior (0.5), which would be misleading as a real score.
+- Weakest and strongest lists only include patterns with at least one review.
+- Chart colours use the same CSS variables as the rest of the app, so light and dark mode both work.
