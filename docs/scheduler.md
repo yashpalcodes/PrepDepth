@@ -49,3 +49,24 @@ The scheduler is a pure function (`backend/src/scheduler/sm2.ts`). It has no dat
 ## Limitations
 
 The weights (0.6 / 0.4), the half-life (14 days) and the rating scores are reasonable starting values, not measured ones. The simulation in a later phase will compare this strategy against random and plain SM-2 revisiting, and real user data will show whether the values need changing.
+
+## Simulation
+
+`simulation/` compares three ways of choosing the day's reviews on a synthetic learner: random revisiting, plain SM-2 (most overdue first) and the pattern-weighted queue. It imports the real scheduler modules from `backend/src/scheduler`. Run it with `npm run sim` inside `simulation/`.
+
+Full numbers and charts: [simulation-results.md](simulation-results.md).
+
+### What the model assumes
+
+- Memory decays exponentially, `exp(-days / stability)`. Successful reviews grow stability, failures shrink it, and patterns differ in difficulty.
+- **Transfer (an assumption):** reviewing any problem in a pattern raises a skill that makes every problem in that pattern easier to remember. Pattern weighting can only help if something like this is true, so one scenario assumes it and another assumes none.
+- The learner's rating is derived from the recall probability. Real people rate themselves with noise.
+- Every strategy gets the same daily review limit and the same starting problems.
+
+### Findings
+
+(Write 3-4 sentences here from YOUR results. State the size of the difference and the seed count, say what happened in the no-transfer scenario, and say plainly that this is a simulation and the real test is the classmate pilot.)
+
+### Limitations
+
+The learner model is a simplification, the parameters (growth factors, skill gain, pattern difficulty) are chosen by hand rather than fitted to data, and ratings are not noisy. The simulation cannot show that PrepDebt helps real students. It only shows how the strategies behave under these assumptions.
