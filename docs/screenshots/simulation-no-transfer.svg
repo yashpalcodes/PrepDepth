@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" width="760" height="430" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif">
+<rect width="760" height="430" fill="#ffffff"/>
+<text x="64" y="30" font-size="18" font-weight="700" fill="#1c2330">Retention over 60 days: No transfer between problems</text>
+<text x="64" y="52" font-size="12" fill="#667085">10 reviews per day, mean of 50 simulated learners. Assumption-based simulation, not real user data.</text>
+<line x1="64" y1="346" x2="736" y2="346" stroke="#e3e6eb"/>
+<text x="56" y="350" font-size="12" text-anchor="end" fill="#667085">10%</text>
+<line x1="64" y1="291.6" x2="736" y2="291.6" stroke="#e3e6eb"/>
+<text x="56" y="295.6" font-size="12" text-anchor="end" fill="#667085">28%</text>
+<line x1="64" y1="237.20000000000002" x2="736" y2="237.20000000000002" stroke="#e3e6eb"/>
+<text x="56" y="241.20000000000002" font-size="12" text-anchor="end" fill="#667085">46%</text>
+<line x1="64" y1="182.8" x2="736" y2="182.8" stroke="#e3e6eb"/>
+<text x="56" y="186.8" font-size="12" text-anchor="end" fill="#667085">64%</text>
+<line x1="64" y1="128.40000000000003" x2="736" y2="128.40000000000003" stroke="#e3e6eb"/>
+<text x="56" y="132.40000000000003" font-size="12" text-anchor="end" fill="#667085">82%</text>
+<line x1="64" y1="74" x2="736" y2="74" stroke="#e3e6eb"/>
+<text x="56" y="78" font-size="12" text-anchor="end" fill="#667085">100%</text>
+<text x="64" y="366" font-size="12" text-anchor="middle" fill="#667085">0</text>
+<text x="177.89830508474574" y="366" font-size="12" text-anchor="middle" fill="#667085">10</text>
+<text x="291.7966101694915" y="366" font-size="12" text-anchor="middle" fill="#667085">20</text>
+<text x="405.6949152542373" y="366" font-size="12" text-anchor="middle" fill="#667085">30</text>
+<text x="519.593220338983" y="366" font-size="12" text-anchor="middle" fill="#667085">40</text>
+<text x="633.4915254237288" y="366" font-size="12" text-anchor="middle" fill="#667085">50</text>
+<text x="400" y="386" font-size="12" text-anchor="middle" fill="#667085">Day</text>
+<text transform="translate(16 210) rotate(-90)" font-size="12" text-anchor="middle" fill="#667085">Average recall probability</text>
+<line x1="64" y1="346" x2="736" y2="346" stroke="#98a2b3"/>
+<path d="M64.0 74.0 L75.4 74.0 L86.8 74.0 L98.2 99.7 L109.6 121.0 L120.9 137.0 L132.3 150.6 L143.7 163.4 L155.1 176.9 L166.5 188.9 L177.9 198.1 L189.3 207.0 L200.7 215.3 L212.1 223.7 L223.5 229.1 L234.8 235.7 L246.2 242.4 L257.6 248.2 L269.0 253.4 L280.4 257.8 L291.8 262.0 L303.2 266.5 L314.6 270.4 L326.0 275.3 L337.4 286.6 L348.7 294.0 L360.1 298.5 L371.5 301.0 L382.9 303.5 L394.3 304.3 L405.7 305.4 L417.1 306.9 L428.5 307.7 L439.9 308.1 L451.3 308.7 L462.6 309.9 L474.0 310.0 L485.4 309.8 L496.8 310.9 L508.2 310.4 L519.6 311.1 L531.0 311.8 L542.4 312.6 L553.8 312.3 L565.2 312.5 L576.5 313.3 L587.9 314.2 L599.3 313.0 L610.7 313.6 L622.1 313.8 L633.5 314.5 L644.9 314.4 L656.3 314.3 L667.7 314.3 L679.1 314.2 L690.4 314.5 L701.8 314.7 L713.2 315.1 L724.6 315.2 L736.0 316.1" fill="none" stroke="#868e96" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M64.0 74.0 L75.4 74.0 L86.8 74.0 L98.2 93.3 L109.6 105.6 L120.9 118.6 L132.3 136.8 L143.7 150.4 L155.1 166.8 L166.5 179.4 L177.9 187.2 L189.3 198.2 L200.7 207.9 L212.1 214.2 L223.5 220.8 L234.8 228.7 L246.2 236.1 L257.6 245.1 L269.0 249.9 L280.4 254.1 L291.8 260.2 L303.2 264.7 L314.6 269.5 L326.0 275.5 L337.4 287.8 L348.7 295.9 L360.1 301.8 L371.5 304.4 L382.9 307.0 L394.3 310.0 L405.7 311.8 L417.1 312.0 L428.5 314.8 L439.9 314.3 L451.3 315.1 L462.6 316.4 L474.0 315.0 L485.4 316.0 L496.8 317.5 L508.2 317.9 L519.6 318.7 L531.0 320.4 L542.4 320.2 L553.8 320.3 L565.2 321.3 L576.5 320.8 L587.9 321.8 L599.3 321.9 L610.7 321.6 L622.1 322.0 L633.5 323.2 L644.9 323.6 L656.3 325.3 L667.7 325.4 L679.1 325.7 L690.4 325.9 L701.8 325.9 L713.2 326.1 L724.6 326.3 L736.0 326.3" fill="none" stroke="#e67700" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M64.0 74.0 L75.4 74.0 L86.8 74.0 L98.2 87.8 L109.6 106.0 L120.9 124.4 L132.3 142.2 L143.7 158.4 L155.1 175.7 L166.5 190.6 L177.9 204.0 L189.3 215.1 L200.7 224.5 L212.1 232.0 L223.5 238.0 L234.8 242.7 L246.2 246.5 L257.6 250.7 L269.0 254.6 L280.4 258.9 L291.8 263.0 L303.2 267.4 L314.6 271.9 L326.0 276.6 L337.4 289.5 L348.7 297.7 L360.1 303.7 L371.5 307.8 L382.9 310.7 L394.3 312.9 L405.7 314.2 L417.1 315.7 L428.5 317.3 L439.9 317.9 L451.3 318.5 L462.6 319.5 L474.0 320.6 L485.4 322.3 L496.8 323.6 L508.2 324.8 L519.6 325.7 L531.0 326.4 L542.4 326.6 L553.8 326.8 L565.2 327.2 L576.5 327.4 L587.9 328.1 L599.3 329.0 L610.7 329.3 L622.1 330.1 L633.5 330.8 L644.9 331.5 L656.3 332.0 L667.7 331.9 L679.1 332.0 L690.4 332.6 L701.8 332.4 L713.2 333.0 L724.6 333.4 L736.0 333.6" fill="none" stroke="#3b5bdb" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="64" y1="408" x2="86" y2="408" stroke="#868e96" stroke-width="3"/>
+<text x="92" y="412" font-size="12" fill="#1c2330">Random revisiting</text>
+<line x1="279" y1="408" x2="301" y2="408" stroke="#e67700" stroke-width="3"/>
+<text x="307" y="412" font-size="12" fill="#1c2330">SM-2, most overdue first</text>
+<line x1="494" y1="408" x2="516" y2="408" stroke="#3b5bdb" stroke-width="3"/>
+<text x="522" y="412" font-size="12" fill="#1c2330">Pattern-weighted queue</text>
+</svg>

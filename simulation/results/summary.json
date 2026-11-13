@@ -1,0 +1,32 @@
+{
+  "seeds": 50,
+  "limit": 10,
+  "transfer": {
+    "transfer": 0.8,
+    "lastThirtyDayMean": {
+      "random": 0.4250044946212742,
+      "sm2": 0.43168149347977824,
+      "pattern": 0.4254462299508844
+    },
+    "pairedDiffPatternMinusSm2": {
+      "mean": -0.00623526352889397,
+      "stderr": 0.0038302896001778056,
+      "wins": 21,
+      "seeds": 50
+    }
+  },
+  "no-transfer": {
+    "transfer": 0,
+    "lastThirtyDayMean": {
+      "random": 0.2121764741721055,
+      "sm2": 0.18452353326404547,
+      "pattern": 0.1646083277514231
+    },
+    "pairedDiffPatternMinusSm2": {
+      "mean": -0.0199152055126224,
+      "stderr": 0.002795307694158404,
+      "wins": 6,
+      "seeds": 50
+    }
+  }
+}
